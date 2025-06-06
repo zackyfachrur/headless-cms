@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KarirController;
+use App\Http\Controllers\PaketController;
 use Illuminate\Http\Request;
 
 /*
@@ -81,8 +82,10 @@ Route::get("/kontak", function () {
 });
 
 
+Route::get('/cari-paket', [PaketController::class, 'index'])->name('paket.index');
 Route::get('/portfolio', [PortfolioController::class, 'view'])->name('portfolio.view');
 Route::get('/karir', [KarirController::class, 'view'])->name('karir.view');
+Route::get('/karir/{slug}', [KarirController::class, 'detail'])->name('karir.detail');
 /*
     End Routes Halaman
 _______________________________

@@ -37,6 +37,22 @@ function filterCategory(category) {
 }
 
 
+function filterCategory(category) {
+    const rows = document.querySelectorAll('#paket-row');
+
+    rows.forEach(row => {
+        const rowCategory = row.getAttribute('data-category');
+
+        if (category === 'all' || rowCategory === category) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+}
+
+
+
 function togglePassword() {
     const toggleEye = document.getElementById('toggle-eye');
     const togglePassword = document.getElementById('password-admin');
@@ -63,3 +79,34 @@ function addField() {
 function removeField(button) {
     button.parentElement.remove();
 }
+
+
+document.getElementById('filterTabs').addEventListener('click', function (e) {
+    if (e.target.tagName !== 'BUTTON') return;
+
+    Array.from(this.children).forEach(btn => {
+        btn.classList.remove('btn-primary', 'active');
+        btn.classList.add('btn-outline-primary');
+        btn.setAttribute('aria-selected', 'false');
+        btn.tabIndex = -1;
+    });
+    e.target.classList.add('btn-primary', 'active');
+    e.target.classList.remove('btn-outline-primary');
+    e.target.setAttribute('aria-selected', 'true');
+    e.target.tabIndex = 0;
+
+    const filter = e.target.getAttribute('data-filter');
+    const items = document.querySelectorAll('#portfolioGrid > article');
+
+    items.forEach(item => {
+        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.classList.remove('d-none');
+        } else {
+            item.classList.add('d-none');
+        }
+    });
+});
+
+
+
+document.getElementById('copyright-year').textContent = new Date().getFullYear();

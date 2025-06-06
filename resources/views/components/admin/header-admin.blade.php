@@ -55,6 +55,7 @@
               <i class="mr-3 fas fa-calendar"></i>
               Calendar
           </a>
+
           <a href="#" class="flex items-center py-2 pl-4 text-white opacity-75 hover:opacity-100 nav-item">
               <i class="mr-3 fas fa-cogs"></i>
               Support

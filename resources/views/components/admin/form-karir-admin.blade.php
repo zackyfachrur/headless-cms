@@ -23,30 +23,41 @@
                         {{-- Nama Pekerjaan --}}
                         <div class="flex flex-col w-full">
                             <label for="job_title">Nama Pekerjaan <span class="text-red-500">*</span> </label>
-                            <input type="text" name="job_title" id="job_title" placeholder="Web Programmer" required
+                            <input type="text" name="job_title" id="job_title" placeholder="Contoh: Web Programmer" required
+                                class="w-full border-2 border-gray-400 rounded-lg bg-gray-50">
+                        </div>
+
+                        {{-- Divisi Pekerjaan --}}
+                        <div class="flex flex-col w-full">
+                            <label for="job_location">Divisi Pekerjaan<span class="text-red-500">*</span> </label>
+                            <input type="text" name="job_division" id="job_division" placeholder="Contoh: Information Technology"
+                                value="{{ old('job_division') }}" required
                                 class="w-full border-2 border-gray-400 rounded-lg bg-gray-50">
                         </div>
 
                         {{-- Lokasi --}}
                         <div class="flex flex-col w-full">
                             <label for="job_location">Lokasi<span class="text-red-500">*</span> </label>
-                            <input type="text" name="job_location" id="job_location" placeholder="Jakarta"
+                            <input type="text" name="job_location" id="job_location" placeholder="Contoh: Jakarta"
                                 value="{{ old('job_location') }}" required
                                 class="w-full border-2 border-gray-400 rounded-lg bg-gray-50">
                         </div>
 
+                        {{-- Deskripsi --}}
                         <div class="flex flex-col w-full">
                             <label for="job_description">Deskripsi Pekerjaan<span class="text-red-500">*</span></label>
                             <textarea name="job_description" id="job_description" required
                                 class="w-full border-2 border-gray-400 rounded-lg bg-gray-50" rows="5"></textarea>
                         </div>
 
+
+
                     </div>
 
                     <div class="flex flex-col w-full">
-                        {{-- Status --}}
 
-                        <div class="flex flex-col w-full mb-4">
+                        {{-- Status --}}
+                        <div class="flex flex-col w-full mb-[12px]">
                             <label for="job_status">Status Pekerjaan<span class="text-red-500">*</span></label>
                             <select name="job_status" id="job_status"
                                 class="w-full text-gray-500 border-2 border-gray-400 rounded-lg cursor-pointer bg-gray-50"
@@ -58,12 +69,21 @@
                             </select>
                         </div>
 
+
+                        {{-- Deadline --}}
+                        <div class="flex flex-col w-full mb-[12px]">
+                            <label for="job_deadline">Deadline<span class="text-red-500">*</span> </label>
+                            <input type="date" name="job_deadline" id="job_deadline" placeholder="Jakarta"
+                                value="{{ old('job_deadline') }}" required
+                                class="w-full border-2 border-gray-400 rounded-lg bg-gray-50">
+                        </div>
+
                         {{-- Persyaratan --}}
                         <div class="mb-4">
-                            <label class="block mb-2 text-sm font-medium">Persyaratan Pekerjaan<span
+                            <label class="block mb-2 font-medium">Persyaratan Pekerjaan<span
                                     class="text-red-500">*</span></label>
 
-                            <div class="overflow-y-scroll h-[170px]" id="requirement-fields">
+                            <div class="overflow-y-scroll h-[185px]" id="requirement-fields">
                                 <div class="flex gap-2 mb-2 w-full">
                                     <input type="text" name="job_requirements[]"
                                         class="w-full border-2 border-gray-400 rounded-lg bg-gray-50"

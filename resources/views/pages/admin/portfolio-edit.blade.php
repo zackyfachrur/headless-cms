@@ -43,7 +43,7 @@
 
                         <div class="flex flex-col w-full">
                             <label for="deskripsi">Deskripsi Project <span class="text-red-500">*</span></label>
-                            <textarea name="description" id="deskripsi" required rows="1" placeholder="Contoh: Website ini untuk..."
+                            <textarea name="description" id="deskripsi" required rows="4" placeholder="Contoh: Website ini untuk..."
                                 class="w-full border-2 border-gray-400 rounded-lg bg-gray-50">{{ old('description', $portfolio->description) }}</textarea>
                         </div>
 
@@ -97,7 +97,7 @@
 
                         <div class="flex flex-col w-full">
                             <label for="demo_password">Password Akun</label>
-                            <input type="password" name="demo_password" placeholder="Contoh: 123"
+                            <input type="text" name="demo_password" placeholder="Contoh: 123"
                                 value="{{ old('demo_password', $portfolio->demo_password) }}"
                                 class="w-full border-2 border-gray-400 rounded-lg bg-gray-50">
                         </div>
