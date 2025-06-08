@@ -1,7 +1,7 @@
  <div class="row container" style="margin-bottom: 8%; margin-top: 5%;">
      <div class="col-lg-5 col-md-12 col-sm-12 align-self-center"
          data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-         <span style="background-color: #f4f6fd;color: #2f55d4;" class="badge bg-soft-primary rounded-pill fw-bold">Benefit
+         <span style="background-color: #f4f6fd;color: #0879FA;" class="badge bg-soft-primary rounded-pill fw-bold">Benefit
          </span>
          <h2 style="letter-spacing: 0.5px;">
              Benefit Layanan Kami

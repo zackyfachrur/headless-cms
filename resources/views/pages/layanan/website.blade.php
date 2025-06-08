@@ -19,7 +19,7 @@
                 <div class="col-lg-1"></div>
                 <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
                     <div class="left-heading">
-                        <span style="background-color: #f4f6fd;color: #2f55d4;"
+                        <span style="background-color: #f4f6fd;color: #0879FA;"
                             class="badge bg-soft-primary rounded-pill fw-bold">Layanan
                         </span>
                         <h2 class="section-title">Jasa Pembuatan Website</h2>
@@ -134,7 +134,7 @@
             <div class="row">
                 <div class="col-lg-5 col-md-12 col-sm-12 align-self-center"
                     data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <span style="background-color: #f4f6fd;color: #2f55d4;"
+                    <span style="background-color: #f4f6fd;color: #0879FA;"
                         class="badge bg-soft-primary rounded-pill fw-bold">Proses Pengembangan
                     </span>
                     <h4 style="letter-spacing: 0.5px;">

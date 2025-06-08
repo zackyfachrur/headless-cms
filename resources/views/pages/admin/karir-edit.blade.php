@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 
 @section('admin-content')
-    <div class="fixed bottom-0 z-50 right-4 drop-shadow-xl w-[40%]" id="form-karir-modal">
+<section class="flex flex-col items-center justify-center">
+    <div class="drop-shadow-xl w-[40%]">
         <div class="antialiased bg-gray-100 sans-serif">
             @if ($errors->any())
                 <div style="color: red; margin-bottom: 20px;">
@@ -12,11 +13,11 @@
                     </ul>
                 </div>
             @endif
-            <div class="flex flex-col items-start justify-center gap-4 px-8 py-8 bg-white rounded-2xl">
+            <div class="flex flex-col items-start justify-center gap-4 px-8 py-8 bg-white rounded-xl">
                 <div class="flex items-center justify-between w-full">
                     <h2 class="text-2xl font-bold ">Tambah Data Karir</h2>
-                    <button onclick="toggleFormKarir()"><i
-                            class="mr-3 fas fa-close hover:text-blue-500 hover:opacity-100"></i></button>
+                    <a href="{{ route('karir.index') }}"><i
+                            class="mr-3 fas fa-close hover:text-blue-500 hover:opacity-100"></i></a>
                 </div>
                 <form method="POST" action="{{ route('karir.update', $karir->id) }}"
                     class="flex flex-col items-start gap-4 w-full">
@@ -123,5 +124,6 @@
             </div>
         </div>
     </div>
+</section>
 
 @endsection

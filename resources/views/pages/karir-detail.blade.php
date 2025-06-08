@@ -21,6 +21,7 @@
         </div>
     </section>
 
+
     <main class="container mt-4 mb-5 d-flex flex-column justify-content-center" style="height: 50vh;">
         <div class="row d-flex" id="portfolioGrid">
             <article class="col-lg-8">

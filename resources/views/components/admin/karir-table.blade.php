@@ -40,7 +40,7 @@
                         <td class="px-6 py-1 border">{{ Str::limit($karirs->job_description, 30) }}</td>
                         <td class="px-6 py-1 border">{{ Carbon\Carbon::parse($karirs->job_deadline)->format('d F Y') }}</td>
                         <td class="px-6 py-1 border">
-                            {{ is_array($karirs->job_requirements) ? implode(', ', $karirs->job_requirements) : $karirs->job_requirements }}
+                            {{ Str::limit(is_array($karirs->job_requirements) ? implode(', ', $karirs->job_requirements) : $karirs->job_requirements, 30) }}
                         </td>
                         <td class="px-6 py-1 border">{{ $karirs->job_status }}</td>
                         <td class="px-6 py-1 border">
