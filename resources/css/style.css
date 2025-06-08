@@ -29,7 +29,7 @@
     gap: 20px;
     border-radius: 20px 0px 0px 20px;
     background-color: white;
-    filter: drop-shadow(2px 0px 10px rgba(36, 35, 35, 0.10));
+    filter: drop-shadow(2px 0px 10px rgba(36, 35, 35, 0.1));
 }
 
 .second-nav > .nav > li > a > i {
@@ -55,9 +55,7 @@
     color: #333;
     text-decoration: none;
     border-radius: 8px;
-    transition:
-        background-color 0.3s,
-        color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     white-space: normal;
     word-wrap: break-word;
     position: relative;
@@ -104,7 +102,6 @@
 
     overflow-y: auto;
 }
-
 
 body {
     margin: 0;
@@ -639,11 +636,11 @@ body {
 
 /* Footer ------------------- */
 
-
 .main-footer {
     border-top: 1px solid #e9e9e9;
     background-color: white;
-    padding-inline: 180px; padding-block: 40px
+    padding-inline: 180px;
+    padding-block: 40px;
 }
 
 .footer-ul li a {
@@ -666,15 +663,14 @@ body {
     transform: translateX(10px);
 }
 
-
 .title-before::before {
-  content: "";
-  background: #74757E;
-  width: 6px;
-  height: 32px;
-  display: inline-block;
-  margin-right: 4px;
-  vertical-align: middle;
+    content: "";
+    background: #74757e;
+    width: 6px;
+    height: 32px;
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: middle;
 }
 
 /* End Footer --------------- */
@@ -687,7 +683,7 @@ body {
     align-items: center;
     margin: auto;
     height: 100vh;
-    background-color: #0069D9;
+    background-color: #0069d9;
 }
 
 .auth-card {
@@ -720,7 +716,7 @@ body {
     border-top: 0;
     border-right: 0;
     border-left: 0;
-    border-bottom: solid 2px #0069D9;
+    border-bottom: solid 2px #0069d9;
 }
 
 .auth-card form label {
@@ -734,7 +730,6 @@ body {
 
 /* End Auth Section --------------- */
 
-
 /* Karir Detail ------------------- */
 
 #button-status {
@@ -743,7 +738,7 @@ body {
     font-size: 18px;
     color: white;
     font-weight: bold;
-    background-color: #0069D9;
+    background-color: #0069d9;
     padding: 8px 32px 8px 32px;
     border-radius: 200px;
 }
@@ -757,7 +752,7 @@ body {
 }
 
 #hero-karir-detail {
-    background: linear-gradient(to right, #013266, #0069D9);
+    background: linear-gradient(to bottom, #013266, #0069d9);
 }
 
 #requirements-icon {
@@ -767,16 +762,133 @@ body {
     color: #25d366;
 }
 
-
 /* End Karir Detail --------------- */
 
+/* Paket Pages */
+
+/* From Uiverse.io by rmdhnkhsn */
+.card-benefit {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    max-width: 350px;
+    padding: 24px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 30px;
+    border: 1px solid #c5c5c5;
+    background: #fff;
+    transition: 1s all;
+    text-decoration: none;
+}
+.title-benefit {
+    color: #072713;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35.196px;
+    transition: 0.4s all;
+}
+.subtitle-benefit {
+    color: #7e8882;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    transition: 0.4s all;
+}
+.icon-circle-benefit {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    color: #007bff;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #e5f6eb;
+}
+.card-benefit:hover {
+    background: #007bff;
+    transition: 0.4s all;
+}
+.card-benefit:hover .title-benefit,
+.card-benefit:hover .subtitle-benefit {
+    color: #fff;
+    transition: 0.4s all;
+}
+.btnRound {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    padding: 6px 28px;
+    border-radius: 100px;
+    border: 1px solid #007bff;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+.btnRound:hover {
+    box-shadow: 0px 6px 10px 0px rgba(35, 197, 94, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btnService {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    color: #007bff;
+    transform: translate(-50%, -50%);
+}
+
+#price-list-paket {
+    gap: 12px;
+    width: 120%;
+}
+
+#paket-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #007bff;
+    height: 60vh;
+    width: 100%;
+}
+
+/* End Paket Pages */
+
+/* Faq Style */
+
+#faq-hero {
+    display: flex; justify-content: center; align-items: center;
+    color: white;
+    background: linear-gradient(to bottom, #013266, #0069d9);
+    height: 40vh;
+}
+
+#faq-hero div.container {
+    display: flex; justify-content: end; align-items: center; flex-direction: column;
+    height: 50%;
+}
+
+#faq-hero div.container p {
+    width: 60%;
+}
+
+/* End Faq Style */
 
 /* Responsive - mobile */
 
 @media screen and (max-width: 768px) {
     .main-footer {
         background-color: white;
-        padding-inline: 0px; padding-block: 40px;
+        padding-inline: 0px;
+        padding-block: 40px;
     }
 
     .mega-menu-content {
@@ -808,90 +920,12 @@ body {
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 4px;
     }
+
+    #price-list-paket {
+        gap: 12px;
+        flex-direction: column;
+        width: 90%;
+    }
 }
 
 /* End Responsive Mobile */
-
-/* Paket Pages */
-
-/* From Uiverse.io by rmdhnkhsn */
-.card-benefit {
-  position: relative;
-  margin-top: 20px;
-  display: flex;
-  max-width: 350px;
-  padding: 24px 18px;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 30px;
-  border: 1px solid #c5c5c5;
-  background: #fff;
-  transition: 1s all;
-  text-decoration: none;
-}
-.title-benefit {
-  color: #072713;
-  text-align: center;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 35.196px;
-  transition: 0.4s all;
-}
-.subtitle-benefit {
-  color: #7e8882;
-  text-align: center;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  transition: 0.4s all;
-}
-.icon-circle-benefit {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  color: #007bff;
-  align-items: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #e5f6eb;
-}
-.card-benefit:hover {
-  background: #007bff;
-  transition: 0.4s all;
-}
-.card-benefit:hover .title-benefit,
-.card-benefit:hover .subtitle-benefit {
-  color: #fff;
-  transition: 0.4s all;
-}
-.btnRound {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  padding: 6px 28px;
-  border-radius: 100px;
-  border: 1px solid #007bff;
-  background: #fff;
-  transition: all 0.2s ease;
-}
-.btnRound:hover {
-  box-shadow: 0px 6px 10px 0px rgba(35, 197, 94, 0.2);
-  transition: all 0.2s ease;
-}
-.btnService {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  color: #007bff;
-  transform: translate(-50%, -50%);
-}
-
-
-/* End Paket Pages */

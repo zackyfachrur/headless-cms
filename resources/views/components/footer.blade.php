@@ -1,7 +1,7 @@
 <footer class="main-footer text-start text-lg-start text-muted" id="footer-container">
 
     <!-- Section: Links  -->
-    <section class="">
+    <section>
         <div class="container-fluid text-start text-md-start mt-5">
             <!-- Grid row -->
             <div class="row mt-3">
@@ -77,18 +77,18 @@
                 <!-- Grid column -->
 
                 <!-- Grid column -->
-                <ul class="col-md-4 col-lg-3 col-xl-2 mx-auto mb-md-0 mb-4">
+                <ul class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
                     <h5 class="title-before mb-3">
                         Hubungi Kami
                     </h5>
-                    <li class="mb-2"><i class="fas fa-home me-3"></i> New York, NY 10012, US</li>
+                    <li class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>  Dusun 1 Sialang Indah Kubang Jaya No 11 Kabupaten Kampar, Riau Indonesia.​</li>
+                    <li class="mb-2"><i class="fa fa-clock me-3"></i> Senin - Jumat Pukul 08.00 - 16.00 WIB​</li>
+                    <li class="mb-2"><i class="fas fa-phone me-3"></i> 082284352106</li>
                     <li class="mb-2">
                         <i class="fas fa-envelope me-3"></i>
-                        info@example.com
+                        nusatechnoindonesia@gmail.com
                     </li>
-                    <li class="mb-2"><i class="fas fa-phone me-3"></i> + 01 234 567 88</li>
-                    <li class="mb-2"><i class="fas fa-print me-3"></i> + 01 234 567 89</li>
                 </ul>
                 <!-- Grid column -->
             </div>

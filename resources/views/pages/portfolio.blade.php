@@ -39,8 +39,9 @@
         <div class="row row-cols-3" id="portfolioGrid">
 
             @forelse ($portfolio as $portfolios)
-                <article class="mt-2 col-12 col-sm-6 col-md-4" data-category="{{ $portfolios->category }}">
-                    <div class="shadow-sm card h-100 border-light">
+            <!-- Card -->
+                <article class="mt-2 col-12 col-sm-6 col-md-4 " data-category="{{ $portfolios->category }}">
+                    <div class="shadow-sm card h-100  border">
                         <img alt="{{ $portfolios->title }}" class="p-3 card-img-top object-fit-contain"
                             style="height:180px; width:100%;" src="{{ asset('storage/' . $portfolios->image) }}" />
                         <div class="card-body d-flex flex-column">
@@ -81,15 +82,16 @@
                                     <p class="mt-1 small fst-italic text-muted" style="font-size: 10px; font-weight: bold">
                                         *{{ $portfolios->progress_note }}
                                 </div>
-                                <a class="gap-1 p-0 mt-auto btn btn-link text-primary text-decoration-none small d-flex align-items-center"
-                                    href="{{ $portfolios->detail_url }}" style="font-weight: bold; font-size: 12px">
-                                    Lihat Selengkapnya
-                                    <i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i>
-                                </a>
                             @endif
+                            <a class="gap-1 p-0 mt-auto btn btn-link text-primary text-decoration-none small d-flex align-items-center"
+                                href="{{ $portfolios->detail_url }}" target="_blank" style="font-weight: bold; font-size: 12px">
+                                Lihat Selengkapnya
+                                <i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i>
+                            </a>
                         </div>
                     </div>
                 </article>
+                <!-- End Card -->
                 @empty
                 <article class="d-flex justify-content-center align-self-center mt-2 col-12 col-sm-6 col-md-4" style="width: 100%;">
                     <p style="color: gray; font-weight: bold;">Belum ada data</p>
