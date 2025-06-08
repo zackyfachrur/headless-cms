@@ -10,16 +10,23 @@
                         Nama Pekerjaan
                     </th>
                     <th scope="col" class="px-6 py-3 border">
-                        Lokasi Pekerjaan
+                        Divisi Pekerjaan
+                    </th>
+                    <th scope="col" class="px-6 py-3 border">
+                        Lokasi
                     </th>
                     <th scope="col" class="px-6 py-3 border">
                         Deskripsi Pekerjaan
+                    </th>
+
+                    <th scope="col" class="px-6 py-3 border">
+                        Deadline
                     </th>
                     <th scope="col" class="px-6 py-3 border">
                         Persyaratan Pekerjaan
                     </th>
                     <th scope="col" class="px-6 py-3 border">
-                        Status Pekerjaan
+                        Status
                     </th>
                 </tr>
             </thead>
@@ -28,14 +35,16 @@
                     <tr class="bg-white border-b border-gray-200">
                         <td class="px-6 py-1 text-center border">{{ $karirs->id }}</td>
                         <td class="px-6 py-1 border">{{ $karirs->job_title }}</td>
+                        <td class="px-6 py-1 border">{{ $karirs->job_division }}</td>
                         <td class="px-6 py-1 border">{{ $karirs->job_location }}</td>
-                        <td class="px-6 py-1 border">{{ Str::limit($karirs->job_description, 50) }}</td>
+                        <td class="px-6 py-1 border">{{ Str::limit($karirs->job_description, 30) }}</td>
+                        <td class="px-6 py-1 border">{{ Carbon\Carbon::parse($karirs->job_deadline)->format('d F Y') }}</td>
                         <td class="px-6 py-1 border">
                             {{ is_array($karirs->job_requirements) ? implode(', ', $karirs->job_requirements) : $karirs->job_requirements }}
                         </td>
                         <td class="px-6 py-1 border">{{ $karirs->job_status }}</td>
                         <td class="px-6 py-1 border">
-                            <div class="flex flex-row gap-2">eb
+                            <div class="flex flex-row gap-2">
                                 <a href="{{ route('karir.edit', $karirs->id) }}"
                                     class="w-full px-2 py-1 font-bold text-center text-blue-500 rounded text-md hover:text-blue-600 hover:no-underline">
                                     <i class="fa-solid fa-pen-to-square"></i>

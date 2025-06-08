@@ -18,7 +18,8 @@
                     <button onclick="toggleFormKarir()"><i
                             class="mr-3 fas fa-close hover:text-blue-500 hover:opacity-100"></i></button>
                 </div>
-                <form method="POST" action="{{ route('karir.update', $karir->id) }}" class="flex flex-col items-start gap-4 w-full">
+                <form method="POST" action="{{ route('karir.update', $karir->id) }}"
+                    class="flex flex-col items-start gap-4 w-full">
                     @csrf
                     @method('PUT')
 
@@ -27,19 +28,29 @@
                             {{-- Nama Pekerjaan --}}
                             <div class="flex flex-col w-full">
                                 <label for="job_title">Nama Pekerjaan <span class="text-red-500">*</span> </label>
-                                <input type="text" name="job_title" id="job_title" placeholder="Web Programmer" required
-                                    class="w-full border-2 border-gray-400 rounded-lg bg-gray-50"
+                                <input type="text" name="job_title" id="job_title" placeholder="Contoh: Web Programmer"
+                                    required class="w-full border-2 border-gray-400 rounded-lg bg-gray-50"
                                     value="{{ old('job_title', $karir->job_title) }}">
+                            </div>
+
+                            {{-- Divisi Pekerjaan --}}
+                            <div class="flex flex-col w-full">
+                                <label for="job_division">Divisi Pekerjaan<span class="text-red-500">*</span> </label>
+                                <input type="text" name="job_division" id="job_division"
+                                    placeholder="Contoh: Information Technology"
+                                    value="{{ old('job_division', $karir->job_division) }}" required
+                                    class="w-full border-2 border-gray-400 rounded-lg bg-gray-50">
                             </div>
 
                             {{-- Lokasi --}}
                             <div class="flex flex-col w-full">
                                 <label for="job_location">Lokasi<span class="text-red-500">*</span> </label>
-                                <input type="text" name="job_location" id="job_location" placeholder="Jakarta"
+                                <input type="text" name="job_location" id="job_location" placeholder="Contoh: Jakarta"
                                     value="{{ old('job_location', $karir->job_location) }}" required
                                     class="w-full border-2 border-gray-400 rounded-lg bg-gray-50">
                             </div>
 
+                            {{-- Deskripsi --}}
                             <div class="flex flex-col w-full">
                                 <label for="job_description">Deskripsi Pekerjaan<span class="text-red-500">*</span></label>
                                 <textarea name="job_description" id="job_description" required
@@ -49,40 +60,51 @@
                         </div>
 
                         <div class="flex flex-col w-full">
-                            {{-- Status --}}
 
-                            <div class="flex flex-col w-full mb-4">
+                            {{-- Status --}}
+                            <div class="flex flex-col w-full mb-[12px]">
                                 <label for="job_status">Status Pekerjaan<span class="text-red-500">*</span></label>
                                 <select name="job_status" id="job_status"
                                     class="w-full text-gray-500 border-2 border-gray-400 rounded-lg cursor-pointer bg-gray-50"
                                     required>
                                     <option selected disabled hidden>Open | Closed</option>
-                                    <option value="open" {{ old('job_status', $karir->job_status) == 'open' ? 'selected' : '' }}>Open</option>
-                                    <option value="closed" {{ old('job_status', $karir->job_status) == 'closed' ? 'selected' : '' }}>Closed
+                                    <option value="open"
+                                        {{ old('job_status', $karir->job_status) == 'open' ? 'selected' : '' }}>Open
+                                    </option>
+                                    <option value="closed"
+                                        {{ old('job_status', $karir->job_status) == 'closed' ? 'selected' : '' }}>Closed
                                     </option>
                                 </select>
                             </div>
 
+                               {{-- Deadline --}}
+                        <div class="flex flex-col w-full mb-[12px]">
+                            <label for="job_deadline">Deadline<span class="text-red-500">*</span> </label>
+                            <input type="date" name="job_deadline" id="job_deadline" placeholder="Jakarta"
+                                value="{{ old('job_deadline', $karir->job_deadline) }}" required
+                                class="w-full border-2 border-gray-400 rounded-lg bg-gray-50">
+                        </div>
+
                             {{-- Persyaratan --}}
                             <div class="mb-4">
-                                <label class="block mb-2 text-sm font-medium">Persyaratan Pekerjaan<span
+                                <label class="block mb-2 font-medium">Persyaratan Pekerjaan<span
                                         class="text-red-500">*</span></label>
 
                                 <div class="overflow-y-scroll h-[170px]" id="requirement-fields">
-                                        @foreach ($karir->job_requirements as $job_requirements)
-                                    <div class="flex gap-2 mb-2 w-full">
+                                    @foreach ($karir->job_requirements as $index => $job_requirement)
+                                        <div class="flex gap-2 mb-2 w-full">
+                                            <input type="text" name="job_requirements[]"
+                                                value="{{ old('job_requirements.' . $index, $job_requirement) }}"
+                                                class="w-full border-2 border-gray-400 rounded-lg bg-gray-50"
+                                                placeholder="Masukkan syarat..." required>
 
-                                        <input type="text" name="job_requirements[]"
-                                            value="{{ old('job_requirements', $job_requirements) }}"
-                                            class="w-full border-2 border-gray-400 rounded-lg bg-gray-50"
-                                            placeholder="Masukkan syarat..." required>
-
-                                        <button type="button" onclick="removeField(this)"
-                                            class="px-2 font-bold text-red-500"><i
-                                                class="fas fa-close text-xs text-blue-500 hover:text-red-500 hover:opacity-100"></i></button>
-
-                                    </div>
-                                        @endforeach
+                                            <button type="button" onclick="removeField(this)"
+                                                class="px-2 font-bold text-red-500">
+                                                <i
+                                                    class="fas fa-close text-xs text-blue-500 hover:text-red-500 hover:opacity-100"></i>
+                                            </button>
+                                        </div>
+                                    @endforeach
                                 </div>
 
                                 <button type="button" onclick="addField()"

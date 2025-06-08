@@ -26,6 +26,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    <script src={{ asset('js/manipulation.js') }}></script>
     <script>
         (() => {
             const tabs = document.querySelectorAll('#filterTabs button');

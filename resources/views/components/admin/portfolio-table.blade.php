@@ -59,11 +59,11 @@
                                 style="height:80px; width:80px;" src="{{ asset('storage/' . $portfolios->image) }}" />
                         </td>
                         <td class="px-6 py-1 border">{{ $portfolios->title }}</td>
-                        <td class="px-6 py-1 border">{{ Str::limit($portfolios->description, 80) }}</td>
+                        <td class="px-6 py-1 border">{{ Str::limit($portfolios->description, 20) }}</td>
                         <td class="px-3 py-1 border"><span
                                 class="px-3 py-1 text-white border-2 rounded-full {{ $validate_label }}">{{ $portfolios->category_label }}</span>
                         </td>
-                        <td class="px-6 py-1 border">{{ $portfolios->demo_url }}</td>
+                        <td class="px-6 py-1 border">{{ Str::limit($portfolios->demo_url, 20) }}</td>
                         <td class="px-6 py-1 border">{{ $portfolios->demo_username }}</td>
                         <td class="px-6 py-1 border">{{ $portfolios->demo_password }}</td>
                         <td class="px-6 py-1 border">

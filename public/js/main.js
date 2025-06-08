@@ -74,6 +74,8 @@
         });
     });
 
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
     function onScroll(event) {
         var scrollPos = $(document).scrollTop();
         $('.nav a').each(function () {

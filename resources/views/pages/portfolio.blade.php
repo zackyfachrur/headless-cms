@@ -11,23 +11,23 @@
     <section class="container mt-5">
         <div class="flex-wrap d-flex justify-content-center" style="gap: 8px;" id="filterTabs" role="tablist"
             aria-label="Portfolio categories">
-            <button aria-selected="true" class="btn btn-outline-primary active" data-filter="all" id="tab-all"
+            <button aria-selected="true" class="btn btn-primary active" data-filter="all" id="tab-all"
                 role="tab" tabindex="0" type="button">
                 All
             </button>
-            <button aria-selected="false" class="btn btn-outline-secondary" data-filter="web-apps" id="tab-webapp"
+            <button aria-selected="false" class="btn btn-outline-primary" data-filter="web-apps" id="tab-webapp"
                 role="tab" tabindex="-1" type="button">
                 Web Application
             </button>
-            <button aria-selected="false" class="btn btn-outline-secondary" data-filter="website" id="tab-website"
+            <button aria-selected="false" class="btn btn-outline-primary" data-filter="website" id="tab-website"
                 role="tab" tabindex="-1" type="button">
                 Website
             </button>
-            <button aria-selected="false" class="btn btn-outline-secondary" data-filter="mobile-apps" id="tab-mobile"
+            <button aria-selected="false" class="btn btn-outline-primary" data-filter="mobile-apps" id="tab-mobile"
                 role="tab" tabindex="-1" type="button">
                 Mobile Application
             </button>
-            <button aria-selected="false" class="btn btn-outline-secondary" data-filter="iot" id="tab-iot" role="tab"
+            <button aria-selected="false" class="btn btn-outline-primary" data-filter="iot" id="tab-iot" role="tab"
                 tabindex="-1" type="button">
                 Internet of Things
             </button>
@@ -35,10 +35,10 @@
     </section>
 
     <!-- Portfolio grid -->
-    <main class="container mt-4 mb-5">
+<main class="container mt-4 mb-5">
         <div class="row row-cols-3" id="portfolioGrid">
 
-            @foreach ($portfolio as $portfolios)
+            @forelse ($portfolio as $portfolios)
                 <article class="mt-2 col-12 col-sm-6 col-md-4" data-category="{{ $portfolios->category }}">
                     <div class="shadow-sm card h-100 border-light">
                         <img alt="{{ $portfolios->title }}" class="p-3 card-img-top object-fit-contain"
@@ -90,48 +90,13 @@
                         </div>
                     </div>
                 </article>
-            @endforeach
+                @empty
+                <article class="d-flex justify-content-center align-self-center mt-2 col-12 col-sm-6 col-md-4" style="width: 100%;">
+                    <p style="color: gray; font-weight: bold;">Belum ada data</p>
+                </article>
+            @endforelse
 
-
-            <script>
-                function toggleDemo(button) {
-                    const demoBox = button.nextElementSibling;
-                    const isHidden = demoBox.classList.contains('d-none');
-                    demoBox.classList.toggle('d-none');
-                    button.innerHTML = isHidden ?
-                        'Sembunyikan Akun Demo <i class="fas fa-eye-slash" style="font-size: 0.625rem;"></i>' :
-                        'Tampilkan Akun Demo <i class="fas fa-eye" style="font-size: 0.625rem;"></i>';
-                }
-            </script>
         </div>
     </main>
 
-    <script>
-        document.getElementById('filterTabs').addEventListener('click', function(e) {
-            if (e.target.tagName !== 'BUTTON') return;
-
-            Array.from(this.children).forEach(btn => {
-                btn.classList.remove('btn-outline-primary', 'active');
-                btn.classList.add('btn-outline-secondary');
-                btn.setAttribute('aria-selected', 'false');
-                btn.tabIndex = -1;
-            });
-            e.target.classList.add('btn-outline-primary', 'active');
-            e.target.classList.remove('btn-outline-secondary');
-            e.target.setAttribute('aria-selected', 'true');
-            e.target.tabIndex = 0;
-
-            // Filter items
-            const filter = e.target.getAttribute('data-filter');
-            const items = document.querySelectorAll('#portfolioGrid > article');
-
-            items.forEach(item => {
-                if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                    item.classList.remove('d-none');
-                } else {
-                    item.classList.add('d-none');
-                }
-            });
-        });
-    </script>
 @endsection

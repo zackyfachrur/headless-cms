@@ -7,64 +7,54 @@
         background="images/hero-karir.jpg" />
 
     <!-- ***** Welcome Area End ***** -->
-<!-- Portfolio grid -->
+    <!-- Karir grid -->
     <main class="container mt-4 mb-5">
-        <div class="row row-cols-3" id="portfolioGrid">
-
-            <!-- Item 1 -->
-            <article class="mt-2 col-12 col-sm-6 col-md-4" data-category="webapp">
-                <div class="shadow-sm card h-100 border-light">
-                    <img alt="Antarmuka Aplikasi Apotek Digital dari Nusa Techno Indonesia"
-                        class="p-3 card-img-top object-fit-contain" style="height:180px; width:100%;"
-                        src="/images/apotikwebapps.png" />
-                    <div class="card-body d-flex flex-column">
-                        <span class="mb-2 badge bg-primary" style="font-size: 0.625rem; color: white; width: 100px;">
-                            Web Application
-                        </span>
-                        <h5 class="card-title" style="font-size: 0.875rem;">Apotek Digital – Manajemen Apotek Modern</h5>
-                        <p class="mb-3 card-text text-muted small flex-grow-1">
-                            Aplikasi Apotek Digital mempermudah operasional apotek, termasuk stok obat, racikan, shift
-                            karyawan, QRIS, cetak etiket, dan pengiriman struk via WhatsApp. Dirancang untuk apotek dengan
-                            sistem kerja modern.
-                        </p>
-
-                        <!-- Tombol Demo -->
-                        <button onclick="toggleApotekDemo(this)"
-                            class="gap-1 p-0 mb-2 btn btn-link text-primary text-decoration-none small d-flex align-items-center"
-                            type="button" style="font-weight: bold; font-size: 12px">
-                            Tampilkan Akun Demo
-                            <i class="fas fa-eye" style="font-size: 0.625rem;"></i>
-                        </button>
-
-                        <!-- Info Demo Login -->
-                        <div id="apotik-demo" class="small text-secondary d-none">
-                            <p><strong>Username:</strong> userdemo</p>
-                            <p><strong>Password:</strong> 123</p>
-                            <a href="https://nusatechnoindonesia.com/aplikasiapotik/login" target="_blank"
-                                class="mt-1 text-primary text-decoration-underline d-inline-block">Masuk ke Demo</a>
+        <div class="row">
+            @foreach ($karir as $karirs)
+                <article class="mt-2 col-lg-12 col-sm-12 col-md-12">
+                    <div class="card h-100 shadow-sm border rounded-2xl d-flex flex-row align-items-center"
+                        style="padding: 20px;">
+                        <div
+                            style="height:200px; width:40%; background-color: #f8f7f7; border-radius: 20px; background: url('{{ asset('/images/it.webp') }}'); background-size: cover;">
+                            <img alt="Antarmuka Aplikasi Apotek Digital dari Nusa Techno Indonesia"
+                                class="p-3 card-img-top object-fit-contain" style="width: 30%;"
+                                src="/images/nusatechno-logo.png" />
                         </div>
+                        <div class="card-body row">
+                            <div class="col-lg-8">
+                                <span class="mb-1 badge bg-primary" style="font-size: 12px; color: white; width: 100px;">
+                                    {{ $karirs->job_status === 'open' ? 'Dibuka' : 'Ditutup' }}
+                                </span>
+                                <h5 class="card-title font-weight-bold" style="font-size: 24px; text-transform: capitalize">
+                                    {{ Str::title(strtolower($karirs->job_title)) }}</h5>
 
-                        <a class="gap-1 p-0 mt-auto btn btn-link text-primary text-decoration-none small d-flex align-items-center"
-                            href="https://nusatechnoindonesia.com/aplikasiapotik/login"
-                            style="font-weight: bold; font-size: 12px">
-                            Lihat Selengkapnya
-                            <i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i>
-                        </a>
+                                <div class="d-flex flex-row" style="gap: 8px">
+                                    <p class="card-text text-muted small capitalize"
+                                        style="font-size: 16px">
+                                        <i class="fa-solid fa-calendar-xmark"></i>
+                                        {{ Str::title(strtolower($karirs->job_deadline)) }}
+                                    </p>
+
+                                    <p class="card-text text-muted small capitalize"
+                                        style="font-size: 16px"><i class="fa-solid fa-location-dot"></i>
+                                        {{ Str::title(strtolower($karirs->job_location)) }}</p>
+                                </div>
+                            <p>{{ Str::limit($karirs->job_description, 100) }}</p>
+
+
+                            <a class="gap-1 p-0 mt-2 btn btn-link text-primary text-decoration-none small d-flex align-items-center"
+                                href="{{ route('karir.detail', ['slug' => $karirs->slug]) }}"
+                                style="font-weight: bold; font-size: 12px">
+                                Lihat Selengkapnya
+                                <i class="fas fa-chevron-right" style="font-size: 0.625rem;"></i>
+                            </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </article>
+        </div>
+        </article>
+        @endforeach
 
-            <script>
-                function toggleDemo(button) {
-                    const demoBox = button.nextElementSibling;
-                    const isHidden = demoBox.classList.contains('d-none');
-                    demoBox.classList.toggle('d-none');
-                    button.innerHTML = isHidden ?
-                        'Sembunyikan Akun Demo <i class="fas fa-eye-slash" style="font-size: 0.625rem;"></i>' :
-                        'Tampilkan Akun Demo <i class="fas fa-eye" style="font-size: 0.625rem;"></i>';
-                }
-            </script>
         </div>
     </main>
-
 @endsection

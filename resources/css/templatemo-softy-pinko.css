@@ -630,6 +630,12 @@ header
     color: #ff589e;
 }
 
+ #dropdown-menu-mobile {
+        width: fit-content;
+        padding-right: 20px;
+    }
+
+
 @media (max-width: 1200px) {
     .header-area .main-nav .nav li {
         padding-left: 12px;
@@ -663,6 +669,8 @@ header
     .header-area .main-nav .nav {
         float: none;
         width: 100%;
+        height: 100%;
+        overflow-y: auto;
         margin-top: 80px !important;
         display: none;
         -webkit-transition: all 0s ease 0s;
@@ -691,6 +699,11 @@ header
     }
     .header-area .main-nav .nav li a:hover {
         background: #eee !important;
+    }
+
+    #dropdown-menu-mobile {
+        width: 100%;
+        padding-right: 0px;
     }
 }
 

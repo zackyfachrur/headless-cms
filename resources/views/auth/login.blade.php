@@ -4,8 +4,7 @@
     <section class="flex justify-between flex-row items-center  w-full h-[100vh] bg-blue-600">
         <div class="flex justify-between w-full h-full ">
             <div class="w-[70%] bg-[url('/public/images/BG-Hero-Admin.png')] flex justify-center text-white items-center flex-col">
-                <h2 class="text-6xl font-bold">Halo Admin! </h2>
-                <p class="text-2xl font-semibold">Silakan login untuk mulai mengelola sistem.</p>
+                <img src="{{ asset('images/Nusa-Tablet.png') }}" alt="Hero Login Images" class="w-[80%]">
             </div>
             <div class="w-[50%] bg-gray-100 flex justify-center items-center flex-col">
                 @if ($errors->any())
@@ -55,12 +54,11 @@
                                 Password
                             </label>
                         </div>
-                        <div class="mt-4 mb-5 text-center">
+                        <div class="mt-6 mb-2 text-center">
                             <button data-mdb-button-init data-mdb-ripple-init
                                 class="w-full py-2 text-white bg-blue-600 active:scale-95 hover:bg-blue-500 rounded-xl"
                                 type="submit">Log
                                 in</button>
-                            <a class="text-muted" href="#!">Forgot password?</a>
                         </div>
 
                         @error('email')

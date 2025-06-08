@@ -1,97 +1,107 @@
-  <footer class="text-white bg-primary text-start text-lg-start">
-      <!-- Grid container -->
-      <div class="container p-4">
-          <!--Grid row-->
-          <div class="my-4 row">
-              <!--Grid column-->
-              <div class="mb-4 col-lg-3 col-md-6 mb-md-0">
+<footer class="main-footer text-start text-lg-start text-muted" id="footer-container">
 
-                  <div class="mx-auto mb-4 rounded-circle shadow-1-strong d-flex align-items-center justify-content-center"
-                      style="width: 100px; height: 100px; padding: 50px;">
-                      <img src="{{ asset('images/nusatechno.png') }}" height="140px" alt="" loading="lazy" />
-                  </div>
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container-fluid text-start text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <img src="{{ asset('images/nusatechno.png') }}" alt="Nusa Techno Indonesia Icon"
+                        style="width: 180px; margin-top: -20px;">
+                    <p>
+                        Nusa Techno Indonesia merupakan software house yang bergerak di bidang pengembangan perangkat
+                        lunak, berlokasi di Pekanbaru, Riau. Kami menawarkan solusi dalam pengembangan teknologi
+                        informasi bagi perusahaan, individu, maupun institusi Anda.
+                    </p>
+                </div>
+                <!-- Grid column -->
 
-                  <p class="text-start" style="font-size: 14px">
-                      Nusa Techno Indonesia adalah software house yang bergerak di bidang pengembangan perangkat lunak
-                      dan IoT (Internet Of Things).</p>
-              </div>
-              <!--Grid column-->
+                <!-- Grid column -->
+                <ul class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h5 class="title-before mb-3">
+                        Layanan Kami
+                    </h5>
+                    <li class="mb-2">
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-chevron-right"
+                                style="font-size: 12px"></i> Websites</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-chevron-right"
+                                style="font-size: 12px"></i> Web Application</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-chevron-right"
+                                style="font-size: 12px"></i> Mobile Application</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-chevron-right"
+                                style="font-size: 12px"></i> Internet of Things</a>
+                    </li>
+                </ul>
+                <!-- Grid column -->
 
-              <!--Grid column-->
-              <div class="mb-4 col-lg-3 col-md-6 mb-md-0">
-                  <h5 class="mb-4 text-uppercase font-weight-bold">Layanan Kami </h5>
+                <!-- Grid column -->
+                <ul class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h5 class="title-before mb-3">
+                        Tentang Kami
+                    </h5>
+                    <li class="mb-2">
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-chevron-right"
+                                style="font-size: 12px"></i> Profile</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-chevron-right"
+                                style="font-size: 12px"></i> Kontak</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-chevron-right"
+                                style="font-size: 12px"></i> Testimoni</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-chevron-right"
+                                style="font-size: 12px"></i> Portfolio</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-chevron-right"
+                                style="font-size: 12px"></i> Syarat & Ketentuan</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#!" class="text-reset"><i class="fa-solid fa-chevron-right"
+                                style="font-size: 12px"></i> FAQ</a>
+                    </li>
+                </ul>
+                <!-- Grid column -->
 
-                  <ul class="footer-ul list-unstyled" style="font-size: 14px">
-                      <li class="mb-2">
-                          <a href="#!"><i class="fas fa-arrow-right pe-3"></i> Websites</a>
-                      </li>
-                      <li class="mb-2">
-                          <a href="#!"><i class="fas fa-arrow-right pe-3"></i> Website Application</a>
-                      </li>
-                      <li class="mb-2">
-                          <a href="#!"><i class="fas fa-arrow-right pe-3"></i> Mobile Application</a>
-                      </li>
-                      <li class="mb-2">
-                          <a href="#!"><i class="fas fa-arrow-right pe-3"></i> Internet of Things</a>
-                      </li>
-                  </ul>
-              </div>
-              <!--Grid column-->
+                <!-- Grid column -->
+                <ul class="col-md-4 col-lg-3 col-xl-2 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h5 class="title-before mb-3">
+                        Hubungi Kami
+                    </h5>
+                    <li class="mb-2"><i class="fas fa-home me-3"></i> New York, NY 10012, US</li>
+                    <li class="mb-2">
+                        <i class="fas fa-envelope me-3"></i>
+                        info@example.com
+                    </li>
+                    <li class="mb-2"><i class="fas fa-phone me-3"></i> + 01 234 567 88</li>
+                    <li class="mb-2"><i class="fas fa-print me-3"></i> + 01 234 567 89</li>
+                </ul>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
 
-              <!--Grid column-->
-              <div class="mb-4 col-lg-3 col-md-6 mb-md-0">
-                  <h5 class="mb-4 text-uppercase font-weight-bold">Perusahaan</h5>
-
-                  <ul class="footer-ul list-unstyled" style="font-size: 14px">
-                      <li class="mb-2">
-                          <a href="#!"><i class="fas fa-arrow-right pe-3"></i> Profile</a>
-                      </li>
-                      <li class="mb-2">
-                          <a href="#!"><i class="fas fa-arrow-right pe-3"></i> Kontak</a>
-                      </li>
-                      <li class="mb-2">
-                          <a href="#!"><i class="fas fa-arrow-right pe-3"></i> Testimoni</a>
-                      </li>
-                      <li class="mb-2">
-                          <a href="#!"><i class="fas fa-arrow-right pe-3"></i> FAQ</a>
-                      </li>
-                      <li class="mb-2">
-                          <a href="#!"><i class="fas fa-arrow-right pe-3"></i> Karir</a>
-                      </li>
-                      <li class="mb-2">
-                          <a href="#!"><i class="fas fa-arrow-right pe-3"></i> Portfolio</a>
-                      </li>
-                  </ul>
-              </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
-              <div class="mb-4 col-lg-3 col-md-6 mb-md-0" style="font-size: 14px">
-                  <h5 class="mb-4 text-uppercase font-weight-bold">Contact</h5>
-
-                  <ul class="footer-ul list-unstyled">
-                      <li>
-                          <p><i class="fas fa-map-marker-alt pe-2"></i> Dusun 1 Sialang Indah Kubang Jaya No 11
-                              Kabupaten Kampar, Riau Indonesia.​</p>
-                      </li>
-                      <li>
-                          <p><i class="fas fa-phone pe-2"></i> 082284352106</p>
-                      </li>
-                      <li>
-                          <a href="mailto:admin@webmediadigital.com"><i class="mb-0 fas fa-envelope pe-2"></i> nusatechnoindonesia@gmail.com</a>
-                      </li>
-                  </ul>
-              </div>
-              <!--Grid column-->
-          </div>
-          <!--Grid row-->
-      </div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="p-3 text-center" style="background-color: rgba(0, 0, 0, 0.2)">
-          © 2025
-          <a class="text-white" href="/"> PT. Nusa Techno Indonesia. All Rights Reserved.</a>
-      </div>
-      <!-- Copyright -->
-  </footer>
+    <!-- Copyright -->
+    <div class="text-center p-4 container" style="border-top: solid 1px #e9e9e9">
+        © <span id="copyright-year"></span>
+        <a class="text-reset fw-bold" href="/">PT. Nusa Techno Indonesia. All Rights Reserved.</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
