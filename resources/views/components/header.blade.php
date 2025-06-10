@@ -25,7 +25,7 @@
                                 <li><a href="/layanan/iot">Internet Of Things (IoT)</a></li>
                             </ul>
                         </li>
-                        <li><a href="/portfolio">Testimoni</a></li>
+                        <li><a href="/testimoni">Testimoni</a></li>
                         <li><a href="/karir">Karir</a></li>
                         <li><a href="/kontak">Kontak</a></li>
 

@@ -27,10 +27,10 @@
                 </a>
             </li>
             <li>
-                <a href="/admin/forms"
-                    class="{{ Request::is('admin') ? 'bg-white text-blue-500 rounded-r-2xl mr-4' : 'opacity-75 hover:opacity-100  text-black' }} flex items-center py-2 pl-6 hover:no-underline">
+                <a href="/admin/testimoni"
+                    class="{{ Request::is('admin/testimoni') ? 'bg-white text-blue-500 rounded-r-2xl mr-4' : 'opacity-75 hover:opacity-100  text-black' }} flex items-center py-2 pl-6 hover:no-underline">
                     <i class="mr-3 fas fa-person"></i>
-                    Client
+                    Testimoni
                 </a>
             </li>
             <li>

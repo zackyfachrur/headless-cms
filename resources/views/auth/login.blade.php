@@ -7,15 +7,6 @@
                 <img src="{{ asset('images/Nusa-Tablet.png') }}" alt="Hero Login Images" class="w-[80%]">
             </div>
             <div class="w-[50%] bg-gray-100 flex justify-center items-center flex-col">
-                @if ($errors->any())
-                    <div style="color: red;">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
                 <div class="px-4 py-4 w-[70%] bg-white rounded-2xl">
                     <div class="text-center">
                         {{-- <img src="{{ asset('images/nusatechno.png') }}" style="width: 385px;" alt="logo"> --}}
@@ -66,6 +57,16 @@
                         @enderror
                     </form>
                 </div>
+
+                @if ($errors->any())
+                    <div style="color: red;">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             </div>
         </div>
     </section>
