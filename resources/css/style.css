@@ -683,7 +683,7 @@ body {
     align-items: center;
     margin: auto;
     height: 100vh;
-    background-color: #0069d9;
+    background-color: #006BDD;
 }
 
 .auth-card {
@@ -716,7 +716,7 @@ body {
     border-top: 0;
     border-right: 0;
     border-left: 0;
-    border-bottom: solid 2px #0069d9;
+    border-bottom: solid 2px #006BDD;
 }
 
 .auth-card form label {
@@ -738,7 +738,7 @@ body {
     font-size: 18px;
     color: white;
     font-weight: bold;
-    background-color: #0069d9;
+    background-color: #006BDD;
     padding: 8px 32px 8px 32px;
     border-radius: 200px;
 }
@@ -752,7 +752,7 @@ body {
 }
 
 #hero-karir-detail {
-    background: linear-gradient(to bottom, #013266, #0069d9);
+    background: linear-gradient(to bottom, #013266, #006BDD);
 }
 
 #requirements-icon {
@@ -880,7 +880,56 @@ body {
     width: 60%;
 }
 
+#faq-content {
+    padding-top: 4%;
+    height: 80vh;
+}
+
+.rotate-icon {
+    transition: transform 0.3s;
+}
+
+button[aria-expanded="true"] .rotate-icon {
+    transform: rotate(180deg);
+}
+
 /* End Faq Style */
+
+/* Testimoni Style */
+
+#testimoni-content {
+    height: 100%;
+    padding: 100px 0px;
+}
+
+#testimoni-form div.container {
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#testimoni-form {
+    margin: 0px 0px 80px 0px;
+}
+
+
+/* End Testimoni Style */
+
+/* Paket CTA Style */
+
+#paket-cta-section {
+    background: linear-gradient(to right, #024c9b, #006BDD, #006BDD, #024c9b);
+}
+
+#line-span {
+    display: inline-block;
+    content: "";
+    width: 200px;
+    height: 4px;
+    border-radius: 12px;
+    background: rgb(252, 255, 47);
+}
+
+/* End Paket CTA Style */
 
 /* Responsive - mobile */
 

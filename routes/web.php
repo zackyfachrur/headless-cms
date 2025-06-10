@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KarirController;
 use App\Http\Controllers\PaketController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\TestimoniController;
 use Illuminate\Http\Request;
 
 /*
@@ -49,7 +50,7 @@ Route::prefix("admin")->group(function () {
             return view("pages.admin.portfolio");
         })->name("admin.portfolio");
 
-        // Portfolio Resources
+         /* Portfolio Resources */
         Route::get("/portfolio", [PortfolioController::class, "index"])->name(
             "portfolio.index"
         );
@@ -66,8 +67,9 @@ Route::prefix("admin")->group(function () {
             PortfolioController::class,
             "destroy",
         ])->name("portfolio.destroy");
+        /* End Portfolio Resources */
 
-        // Karir Resources
+         /* Karir Resources */
         Route::get("/karir", [KarirController::class, "index"])->name(
             "karir.index"
         );
@@ -78,6 +80,13 @@ Route::prefix("admin")->group(function () {
         Route::put("/karir/{id}", [KarirController::class, "update"])->name(
             "karir.update"
         );
+        /* End Karir Resources */
+
+        /* Testimoni Resources */
+        Route::resource('testimoni', TestimoniController::class);
+        Route::get('/testimoni',  [TestimoniController::class, "index"])->name('testimoni.index');
+
+        /* End Testimoni Resources */
 
         Route::post("/admin/logout", [LoginController::class, "logout"])->name(
             "admin.logout"
@@ -113,6 +122,8 @@ Route::get("/karir/{slug}", [KarirController::class, "detail"])->name(
 );
 
 Route::get('/faq', [FaqController::class, "view"])->name('faq.view');
+
+Route::get('/testimoni', [TestimoniController::class, "view"])->name('testimoni.view');
 /*
     End Routes Halaman
 _______________________________
